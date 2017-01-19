@@ -75,9 +75,10 @@ namespace CowFields.Fields
             // Start the Prim walk
             while (unvisitedNodes.Count > 0)
             {
-                // Find shortest edge not yet connected
-                KeyValuePair<int, int> nextEdge = unvisitedNodes
+                // Find shortest edge not yet connected to a visited node
+                KeyValuePair<int, int> nextEdge = visitedNodes
                     .SelectMany(n => n.Edges)
+                    .Where(e => !visitedNodes.Select(n => n.Id).Contains(e.Key))
                     .OrderBy(e => e.Value)
                     .First();
 
