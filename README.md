@@ -1,6 +1,6 @@
 # Cow field maintenance
 
-This is a solution for a math class at Lernia College, class of SU15.
+This is a solution for a math class problem at [Lernia College](https://www.lernia.se/), class of SU15.
 
 ## Problem description
 
