@@ -2,6 +2,11 @@
 
 This is a solution for a math class problem at [Lernia College](https://www.lernia.se/), class of SU15.
 
+This problem required implementing a [minimum spanning tree][msp] algorithm, for which I chose [Prim's algorithm][prim].
+
+[msp]:https://en.wikipedia.org/wiki/Minimum_spanning_tree
+[prim]:https://en.wikipedia.org/wiki/Prim%27s_algorithm
+
 ## Problem description
 
 Farmer John's cows wish to travel freely among the _N_ (1 ≤ _N_ ≤ 200) fields (numbered 1..._N_) on the farm, even though the fields are separated by forest. The cows wish to maintain trails between pairs of fields so that they can travel from any field to any other field using the maintained trails. Cows may travel along a maintained trail in either direction.
