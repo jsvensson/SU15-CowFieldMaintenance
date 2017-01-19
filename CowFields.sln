@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CowFields", "CowFields\CowFields.csproj", "{D20D0A54-BF27-48EC-BB2D-175DC0722D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4630F991-A01F-4FEF-9369-CC382C65CB30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D20D0A54-BF27-48EC-BB2D-175DC0722D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20D0A54-BF27-48EC-BB2D-175DC0722D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20D0A54-BF27-48EC-BB2D-175DC0722D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20D0A54-BF27-48EC-BB2D-175DC0722D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4630F991-A01F-4FEF-9369-CC382C65CB30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4630F991-A01F-4FEF-9369-CC382C65CB30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4630F991-A01F-4FEF-9369-CC382C65CB30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4630F991-A01F-4FEF-9369-CC382C65CB30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
