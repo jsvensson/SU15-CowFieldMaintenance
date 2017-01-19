@@ -9,7 +9,7 @@ namespace CowFields.Fields
     public class FieldSet
     {
         public Dictionary<int, Node> Fields { get; set; }
-        public bool AllVisited { get; set; }
+        public bool AllVisited => Fields.All(f => f.Value.Visited);
 
         public FieldSet(int fields)
         {
@@ -51,13 +51,6 @@ namespace CowFields.Fields
                     Fields[to].Edges[from] = weight;
                 }
             }
-
-            // All fields visited yet?
-            if (Fields.All(f => f.Value.Visited))
-            {
-                AllVisited = true;
-            }
-
         }
 
         private int PrimWalk()
