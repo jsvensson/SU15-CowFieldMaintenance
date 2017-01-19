@@ -11,16 +11,26 @@ namespace CowFields
     {
         static void Main(string[] args)
         {
-            var fieldSet = new FieldSet(4);
+            string line;
 
-            fieldSet.NewEdge(1, 2, 10);
-            fieldSet.NewEdge(1, 3, 8);
-            fieldSet.NewEdge(3, 2, 3);
-            fieldSet.NewEdge(1, 4, 3);
+            // Read initial setup line
+            line = Console.ReadLine();
 
-            int result = fieldSet.Solve();
+            string[] setup = line.Split(' ');
+            int fieldCount = int.Parse(setup[0]);
+            var fieldSet = new FieldSet(fieldCount);
 
-            Console.WriteLine(result);
+            // Read remaining input
+            while ((line = Console.ReadLine()) != null)
+            {
+                string[] split = line.Split(' ');
+                int from = int.Parse(split[0]);
+                int to = int.Parse(split[1]);
+                int weight = int.Parse(split[2]);
+
+                fieldSet.NewEdge(from, to, weight);
+                Console.WriteLine(fieldSet.Solve());
+            }
         }
     }
 }

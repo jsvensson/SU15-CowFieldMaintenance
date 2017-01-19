@@ -105,7 +105,6 @@ namespace Tests
             fieldSet.NewEdge(1, 3, 6);
             fieldSet.NewEdge(2, 1, 2);
 
-
             int actual = fieldSet.Solve();
 
             Assert.AreEqual(expected, actual);
