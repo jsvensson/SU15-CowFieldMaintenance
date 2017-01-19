@@ -64,21 +64,45 @@ namespace CowFields.Fields
         {
             // Create the sets for the algorithm
             var visitedNodes = new HashSet<Node>();
-            var unvisitedNodes = new HashSet<Node>();
+            var unvisitedNodes = new HashSet<Node>(Fields.Values);
 
             // Initial setup
             int weight = 0;
-            var node = Fields.First().Value;
+            var node = unvisitedNodes.First();
             visitedNodes.Add(node);
-            bool loop = true;
+            unvisitedNodes.Remove(node);
 
             // Start the Prim walk
-            while (visitedNodes != unvisitedNodes)
+            while (unvisitedNodes.Count > 0)
             {
-                
+                // Find shortest edge not yet connected
+                KeyValuePair<int, int> nextEdge = unvisitedNodes
+                    .SelectMany(n => n.Edges)
+                    .OrderBy(e => e.Value)
+                    .First();
+
+                // Add weight to counter
+                weight += nextEdge.Value;
+
+                // Fetch selected node
+                Node nextNode = unvisitedNodes.Single(n => n.Id == nextEdge.Key);
+
+                // Move node to visited set
+                visitedNodes.Add(nextNode);
+                unvisitedNodes.Remove(nextNode);
             }
 
             return weight;
+        }
+
+        public int Solve()
+        {
+            if (!AllVisited)
+            {
+                return -1;
+            }
+
+            return PrimWalk();
         }
     }
 }
