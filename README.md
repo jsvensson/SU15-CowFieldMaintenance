@@ -20,7 +20,7 @@ At the beginning of each week, the cows will describe the wild animal trail they
 -   The first line of input contains two space-separated integers, _N_ and _W_. _W_ is the number of weeks the program will cover (1 ≤ _W_ ≤ 6000).
 -   For each week, read a single line containing the wild animal trail that was discovered. This line contains three space-separated integers: the endpoints (field numbers) and the integer length of that trail (1...10000). No wild animal trail has the same field as both of its endpoints.
 
-### output
+### Output
 Immediately after your program learns about the newly discovered wild animal trail, it should output a single line with the minimum total length of trail the cows must maintain so that they can travel from any field to any other field. If no set of trails allows the cows to travel from any field to any other field, output “-1”.
 
 Your program must exit after outputting the answer for the last week.
