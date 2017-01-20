@@ -1,5 +1,4 @@
-﻿using System;
-using CowFields.Fields;
+﻿using CowFields.Fields;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
