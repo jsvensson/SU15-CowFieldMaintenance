@@ -116,5 +116,20 @@ namespace Tests
             Assert.AreEqual(true, fieldSet.Fields.All(f => f.Value.Visited));
         }
 
+        [TestMethod]
+        public void Handles_Dead_End()
+        {
+            int expected = 8;
+
+            // Node 2 is a dead end
+            fieldSet.NewEdge(1, 2, 1);
+            fieldSet.NewEdge(1, 3, 3);
+            fieldSet.NewEdge(3, 4, 4);
+
+            int actual = fieldSet.Solve();
+
+            Assert.AreEqual(expected, actual);
+        }
+
     }
 }
